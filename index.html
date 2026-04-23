@@ -84,7 +84,7 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
 @keyframes sparkle-anim { 0%{opacity:0;transform:scale(0) rotate(0deg)} 35%{opacity:1;transform:scale(1.1) rotate(40deg)} 100%{opacity:0;transform:scale(0.2) rotate(80deg) translateY(-12px)} }
 @keyframes pulse-green { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.35)} 50%{box-shadow:0 0 0 6px rgba(34,197,94,0)} }
 .hero h1 { color:var(--color-text); margin-bottom:8px; font-weight:800; letter-spacing:-0.03em; }
-.hero-availability { display:inline-flex; align-items:center; gap:8px; margin-bottom:28px; font-family:var(--font-mono); font-size:0.72rem; font-weight:500; color:var(--color-success); border:1px solid rgba(34,197,94,0.25); background:var(--color-success-dim); padding:5px 14px; border-radius:100px; }
+.hero-availability { display:inline-flex; align-items:center; gap:8px; margin-top:22px; margin-bottom:28px; font-family:var(--font-mono); font-size:0.72rem; font-weight:500; color:var(--color-success); border:1px solid rgba(34,197,94,0.25); background:var(--color-success-dim); padding:5px 14px; border-radius:100px; }
 .hero-availability::before { content:''; width:6px; height:6px; background:var(--color-success); border-radius:50%; animation:pulse-green 2s infinite; }
 .hero-tagline { max-width:520px; margin:0 auto 32px; font-size:clamp(1.14rem,2.16vw,1.26rem); color:var(--color-text-secondary); line-height:1.8; }
 .hero-tagline strong { color:var(--color-text); font-weight:600; }
@@ -212,11 +212,11 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
 .logiciel-card:hover img { transform:scale(1.08); opacity:0.15; }
 .logiciel-card span { font-family:var(--font-mono); font-size:.86rem; font-weight:500; color:var(--color-text-secondary); text-align:center; transition:opacity .3s; }
 .logiciel-card:hover span { opacity:0; }
-.logiciel-card-overlay { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:12px; opacity:0; transition:opacity .35s ease; pointer-events:none; overflow:hidden; }
+.logiciel-card-overlay { position:absolute; inset:0; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:14px 16px; opacity:0; transition:opacity .35s ease; pointer-events:none; overflow:hidden; }
 .logiciel-card:hover .logiciel-card-overlay { opacity:1; }
-.logiciel-card-overlay-title { font-family:var(--font-mono); font-size:.66rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--color-success); margin-bottom:6px; text-align:center; }
+.logiciel-card-overlay-title { font-family:var(--font-mono); font-size:.66rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--color-success); margin-bottom:6px; text-align:left; }
 .logiciel-card-overlay-text ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:4px; }
-.logiciel-card-overlay-text li { font-size:.74rem; line-height:1.3; color:var(--color-text-secondary); text-align:center; }
+.logiciel-card-overlay-text li { font-size:.74rem; line-height:1.3; color:var(--color-text-secondary); text-align:left; }
 .logiciel-card-overlay-text li::before { content:''; display:inline-block; width:3px; height:3px; border-radius:50%; background:var(--color-success); margin-right:5px; vertical-align:middle; }
 .certs-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; max-width:900px; margin:32px auto 0; }
 .ia-cert { display:flex; align-items:center; gap:8px; padding:12px 20px; border-radius:8px; border:1px solid rgba(34,197,94,.15); background:var(--color-success-dim); font-family:var(--font-mono); font-size:.75rem; font-weight:500; color:var(--color-success); flex:1; min-width:200px; justify-content:center; }
@@ -303,6 +303,10 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
 .logo-item img { max-height:96px; max-width:280px; object-fit:contain; }
 
 .footer { text-align:center; padding:28px 40px; font-family:var(--font-mono); font-size:.62rem; color:var(--color-text-muted); }
+#resultats { padding-bottom:80px; }
+#fullcycle { padding-top:80px; padding-bottom:80px; }
+#portefeuille { padding-top:80px; }
+.portfolio-card-pct { font-family:var(--font-mono); font-size:.72rem; font-weight:600; color:var(--color-success); margin-top:6px; }
 
 @media(max-width:700px){
   .stats-grid{grid-template-columns:1fr 1fr} .avatar-ring{width:130px;height:130px}
@@ -362,11 +366,11 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
   </div>
   <div class="hero-parallax-name hero-stagger">
     <h1><span class="sparkle-wrapper" id="sparkleFirst">Frederic</span> Jardet</h1>
-    <p class="hero-role">Sales &amp; Tech &middot;Business Developer B2B</p>
+    <p class="hero-role">Business Developer B2B &middot; Full Cycle, Service &amp; Produits</p>
   </div>
   <div class="hero-stagger"><span class="hero-availability">Disponible &middot; Sept 2026</span></div>
   <div class="hero-stagger">
-    <p class="hero-tagline">Passionn&eacute; par l&rsquo;IA et les outils de la nouvelle g&eacute;n&eacute;ration commerciale.<br>Je construis des pipelines <strong>data-driven</strong>, j&rsquo;automatise l&rsquo;outbound avec <strong>Claude et Copilot</strong>,<br>et je vends dans des environnements exigeants.</p>
+    <p class="hero-tagline">Passionn&eacute; par l&rsquo;IA et la tech. Je construis des pipelines <strong>data-driven</strong> et j&rsquo;automatise l&rsquo;outbound avec <strong>Claude et Copilot</strong>.</p>
   </div>
 </section>
 
@@ -404,14 +408,14 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
 <!-- PORTEFEUILLE -->
 <section id="portefeuille">
   <div class="section-header"><span class="section-label">Portefeuille</span></div>
-  <p class="portfolio-intro fade-in">Un portefeuille h&eacute;t&eacute;rog&egrave;ne g&eacute;r&eacute; en parall&egrave;le. La comp&eacute;tence cl&eacute;&nbsp;: adapter son discours &agrave; un DRH d&rsquo;ambassade, un associ&eacute; d&rsquo;un cabinet d&rsquo;avocats et un directeur d&rsquo;h&ocirc;tel 5 &eacute;toiles <strong>dans la m&ecirc;me journ&eacute;e</strong>.</p>
+  <p class="portfolio-intro fade-in">La comp&eacute;tence cl&eacute;&nbsp;: adapter son discours &agrave; des interlocuteurs radicalement diff&eacute;rents <strong>dans la m&ecirc;me journ&eacute;e</strong>.</p>
   <div class="portfolio-grid">
-    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Juridique</div><div class="portfolio-card-title">Cabinets d&rsquo;avocats</div><div class="portfolio-card-interlocutor">Associ&eacute; g&eacute;rant &middot; DRH</div><div class="portfolio-card-note">Recrutement juridique &middot; Confidentialit&eacute; exig&eacute;e</div></div>
-    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Professions lib&eacute;rales</div><div class="portfolio-card-title">Notaires &amp; experts-comptables</div><div class="portfolio-card-interlocutor">Responsable administratif &middot; DAF</div><div class="portfolio-card-note">Besoins r&eacute;currents &middot; Cycles courts</div></div>
-    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Entreprises</div><div class="portfolio-card-title">Si&egrave;ges sociaux PME/ETI</div><div class="portfolio-card-interlocutor">DRH &middot; DAF &middot; Directeur g&eacute;n&eacute;ral</div><div class="portfolio-card-note">Volumes importants &middot; Relation strat&eacute;gique</div></div>
-    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Diplomatique</div><div class="portfolio-card-title">Ambassades</div><div class="portfolio-card-interlocutor">Responsable RH</div><div class="portfolio-card-note">Profils sp&eacute;cifiques &middot; Discr&eacute;tion exig&eacute;e</div></div>
-    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Luxe &amp; hospitality</div><div class="portfolio-card-title">H&ocirc;tels &amp; restaurants de luxe</div><div class="portfolio-card-interlocutor">Directeur &middot; RRH</div><div class="portfolio-card-note">Saisonnalit&eacute; forte &middot; R&eacute;activit&eacute; requise</div></div>
-    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Mode &amp; artisanat</div><div class="portfolio-card-title">Ateliers de couture</div><div class="portfolio-card-interlocutor">Responsable atelier</div><div class="portfolio-card-note">Profils techniques rares</div></div>
+    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Juridique</div><div class="portfolio-card-title">Cabinets d&rsquo;avocats</div><div class="portfolio-card-interlocutor">Associ&eacute; g&eacute;rant &middot; DRH &middot; Office manager</div><div class="portfolio-card-pct">15 % du portefeuille</div></div>
+    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Professions lib&eacute;rales</div><div class="portfolio-card-title">Notaires &amp; experts-comptables</div><div class="portfolio-card-interlocutor">Responsable administratif &middot; DAF &middot; Office manager</div><div class="portfolio-card-pct">15 % du portefeuille</div></div>
+    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Tous secteurs</div><div class="portfolio-card-title">Si&egrave;ges sociaux PME/ETI</div><div class="portfolio-card-interlocutor">DRH &middot; DAF &middot; Directeur g&eacute;n&eacute;ral</div><div class="portfolio-card-pct">40 % du portefeuille</div></div>
+    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Diplomatique</div><div class="portfolio-card-title">Ambassades</div><div class="portfolio-card-interlocutor">Responsable de r&eacute;sidence &middot; Conseiller de l&rsquo;ambassadeur(drice)</div><div class="portfolio-card-pct">5 % du portefeuille</div></div>
+    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Luxe &amp; hospitality</div><div class="portfolio-card-title">H&ocirc;tels &amp; restaurants de luxe</div><div class="portfolio-card-interlocutor">Directeur &middot; RRH &middot; Office manager</div><div class="portfolio-card-pct">15 % du portefeuille</div></div>
+    <div class="portfolio-card scale-up"><div class="portfolio-card-cat">Mode &amp; artisanat</div><div class="portfolio-card-title">Ateliers de couture</div><div class="portfolio-card-interlocutor">Responsable atelier</div><div class="portfolio-card-pct">10 % du portefeuille</div></div>
   </div>
 </section>
 
@@ -420,31 +424,31 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
   <div class="section-header"><span class="section-label">Parcours</span></div>
   <div class="story-panel panel fade-in">
     <div class="story-text">
-      <p><strong>Profil international</strong> &middot;pass&eacute; par Montr&eacute;al (UQAM), form&eacute; en &eacute;cole de commerce (Montpellier Business School, PGE), j&rsquo;ai d&eacute;velopp&eacute; des comp&eacute;tences commerciales dans trois secteurs radicalement diff&eacute;rents.</p>
-      <p><strong>Services B2B</strong> &middot;Chez Manpower, je vends des prestations de ressources humaines &agrave; des PME et ETI du tertiaire. Prospection outbound, qualification, nurturing, n&eacute;gociation et closing : full cycle sur un portefeuille de 150 comptes.</p>
-      <p><strong>Produits FMCG B2B</strong> &middot;Chez Danone, j&rsquo;ai d&eacute;velopp&eacute; 30 comptes en grande distribution. N&eacute;gociation terrain quotidienne, 100% des objectifs atteints.</p>
-      <p><strong>Services bancaires B2B</strong> &middot;&Agrave; la Soci&eacute;t&eacute; G&eacute;n&eacute;rale, j&rsquo;ai g&eacute;r&eacute; un portefeuille de 50 comptes professionnels : cr&eacute;dits, produits bancaires, reconqu&ecirc;te clients post-fusion Cr&eacute;dit du Nord.</p>
+      <p><strong>Profil international</strong> — pass&eacute; par Montr&eacute;al (UQAM), form&eacute; en &eacute;cole de commerce (Montpellier Business School, PGE), j&rsquo;ai d&eacute;velopp&eacute; des comp&eacute;tences commerciales dans trois secteurs radicalement diff&eacute;rents.</p>
+      <p><strong>Services B2B</strong> — Chez Manpower, je vends des prestations de ressources humaines &agrave; des PME et ETI du tertiaire. Prospection outbound, qualification, nurturing, n&eacute;gociation et closing : full cycle sur un portefeuille de 150 comptes.</p>
+      <p><strong>Produits FMCG B2B</strong> — Chez Danone, j&rsquo;ai d&eacute;velopp&eacute; 30 comptes en grande distribution. N&eacute;gociation terrain quotidienne, 100% des objectifs atteints.</p>
+      <p><strong>Services bancaires B2B</strong> — &Agrave; la Soci&eacute;t&eacute; G&eacute;n&eacute;rale, j&rsquo;ai g&eacute;r&eacute; un portefeuille de 50 comptes professionnels : cr&eacute;dits, produits bancaires, reconqu&ecirc;te clients post-fusion Cr&eacute;dit du Nord.</p>
     </div>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:0 auto;">
     <div class="timeline-panel panel fade-in">
       <h3 style="font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-muted);margin-bottom:16px;">Exp&eacute;riences</h3>
       <div class="timeline">
-        <div class="timeline-item timeline-future"><div class="timeline-date">Sept 2026</div><div class="timeline-title">Disponible &middot;CDI B2B Paris</div></div>
-        <div class="timeline-item"><div class="timeline-date">Ao&ucirc;t 2025 &middot;Pr&eacute;sent</div><div class="timeline-title">Manpower &middot;Business Developer</div><div class="timeline-desc">Vente de services RH B2B, full cycle, portefeuille tertiaire.</div></div>
-        <div class="timeline-item"><div class="timeline-date">F&eacute;v &middot;Juil 2025</div><div class="timeline-title">Danone &middot;Chef de march&eacute;</div><div class="timeline-desc">Vente de produits FMCG B2B, 30 comptes GMS.</div></div>
-        <div class="timeline-item"><div class="timeline-date">Sept 2024 &middot;F&eacute;v 2025</div><div class="timeline-title">Soci&eacute;t&eacute; G&eacute;n&eacute;rale &middot;Assistant commercial</div><div class="timeline-desc">Pilotage commercial de 9 agences, reporting KPI.</div></div>
-        <div class="timeline-item"><div class="timeline-date">Mai &middot;Sept 2024</div><div class="timeline-title">Soci&eacute;t&eacute; G&eacute;n&eacute;rale &middot;Conseiller PRO</div><div class="timeline-desc">Vente de services bancaires B2B, 50 comptes PRO.</div></div>
-        <div class="timeline-item"><div class="timeline-date">2022 &middot;2025</div><div class="timeline-title">Adrenaline MBS &middot;Pr&eacute;sident</div><div class="timeline-desc">Vente B2C d&rsquo;activit&eacute;s de loisir, management 45 personnes.</div></div>
+        <div class="timeline-item timeline-future"><div class="timeline-date">Sept 2026</div><div class="timeline-title">Disponible — CDI B2B Paris</div></div>
+        <div class="timeline-item"><div class="timeline-date">Ao&ucirc;t 2025 &middot; Pr&eacute;sent</div><div class="timeline-title">Manpower — Business Developer</div><div class="timeline-desc">Vente de services RH B2B, full cycle, portefeuille tertiaire.</div></div>
+        <div class="timeline-item"><div class="timeline-date">F&eacute;v &middot; Juil 2025</div><div class="timeline-title">Danone — Chef de march&eacute;</div><div class="timeline-desc">Vente de produits FMCG B2B, 30 comptes GMS.</div></div>
+        <div class="timeline-item"><div class="timeline-date">Sept 2024 &middot; F&eacute;v 2025</div><div class="timeline-title">Soci&eacute;t&eacute; G&eacute;n&eacute;rale — Assistant commercial</div><div class="timeline-desc">Pilotage commercial de 9 agences, reporting KPI.</div></div>
+        <div class="timeline-item"><div class="timeline-date">Mai &middot; Sept 2024</div><div class="timeline-title">Soci&eacute;t&eacute; G&eacute;n&eacute;rale — Conseiller PRO</div><div class="timeline-desc">Vente de services bancaires B2B, 50 comptes PRO.</div></div>
+        <div class="timeline-item"><div class="timeline-date">2022 &middot; 2025</div><div class="timeline-title">Adrenaline MBS — Pr&eacute;sident</div><div class="timeline-desc">Vente B2C d&rsquo;activit&eacute;s de loisir, management 45 personnes.</div></div>
       </div>
     </div>
     <div class="timeline-panel panel fade-in">
       <h3 style="font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-muted);margin-bottom:16px;">Formation</h3>
       <div class="timeline">
-        <div class="timeline-item"><div class="timeline-date">2022 &middot;2026</div><div class="timeline-title">Montpellier Business School</div><div class="timeline-desc">Programme Grande &Eacute;cole (PGE).</div></div>
-        <div class="timeline-item"><div class="timeline-date">Jan &middot;Mai 2024</div><div class="timeline-title">UQAM &middot;Montr&eacute;al, Canada</div><div class="timeline-desc">Semestre international, management en anglais.</div></div>
-        <div class="timeline-item"><div class="timeline-date">2020 &middot;2022</div><div class="timeline-title">Classe Pr&eacute;pa ECS</div><div class="timeline-desc">Lyc&eacute;e Camille Vernet. Rigueur, synth&egrave;se.</div></div>
-        <div class="timeline-item"><div class="timeline-date">2017 &middot;2020</div><div class="timeline-title">Bac Scientifique mention</div><div class="timeline-desc">Lyc&eacute;e Jules Froment.</div></div>
+        <div class="timeline-item"><div class="timeline-date">2022 &middot; 2026</div><div class="timeline-title">Montpellier Business School</div><div class="timeline-desc">Programme Grande &Eacute;cole (PGE).</div></div>
+        <div class="timeline-item"><div class="timeline-date">Jan &middot; Mai 2024</div><div class="timeline-title">UQAM — Montr&eacute;al, Canada</div><div class="timeline-desc">Semestre international, management en anglais.</div></div>
+        <div class="timeline-item"><div class="timeline-date">2020 &middot; 2022</div><div class="timeline-title">Classe Pr&eacute;pa ECS</div><div class="timeline-desc">Lyc&eacute;e Camille Vernet. Rigueur, synth&egrave;se.</div></div>
+        <div class="timeline-item"><div class="timeline-date">2017 &middot; 2020</div><div class="timeline-title">Bac Scientifique mention</div><div class="timeline-desc">Lyc&eacute;e Jules Froment.</div></div>
       </div>
     </div>
   </div>
@@ -454,14 +458,14 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
 <section id="logiciels">
   <div class="section-header"><span class="section-label">Logiciels</span></div>
   <div class="logiciels-grid">
-    <div class="logiciel-card scale-up"><img src="Logiciels/logo-sales-navigator.png" alt="Sales Navigator"/><span>Sales Navigator</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Sales Navigator</div><div class="logiciel-card-overlay-text"><ul><li>Sourcing prospects B2B</li><li>Listes cibl&eacute;es par secteur &amp; fonction</li><li>Identification DRH, DAF, Directeurs</li><li>Usage quotidien chez Manpower</li></ul></div></div></div>
+    <div class="logiciel-card scale-up"><img src="Logiciels/logo-sales-navigator.png" alt="Sales Navigator"/><span>Sales Navigator</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Sales Navigator</div><div class="logiciel-card-overlay-text"><ul><li>Usage quotidien chez Manpower</li><li>Sourcing prospects B2B</li><li>Action sur intention d&rsquo;achats de mes cibles</li><li>Identification des contacts</li></ul></div></div></div>
     <div class="logiciel-card scale-up"><img src="Logiciels/logo-bullhorn.png" alt="Bullhorn"/><span>Bullhorn</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Bullhorn</div><div class="logiciel-card-overlay-text"><ul><li>CRM principal chez Manpower</li><li>Suivi pipeline 150 comptes</li><li>Relances &amp; historique interactions</li><li>Reporting hebdomadaire</li></ul></div></div></div>
-    <div class="logiciel-card scale-up"><img src="Logiciels/logo-hubspot.png" alt="HubSpot"/><span>HubSpot</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">HubSpot</div><div class="logiciel-card-overlay-text"><ul><li>S&eacute;quences inbound &amp; outbound</li><li>Workflows de nurturing</li><li>Scoring &amp; suivi des leads</li><li>Formation autodidacte</li></ul></div></div></div>
-    <div class="logiciel-card scale-up"><img src="Logiciels/logo-excel.png" alt="Excel"/><span>Excel</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Excel</div><div class="logiciel-card-overlay-text"><ul><li>TCD &amp; formules avanc&eacute;es</li><li>INDEX/EQUIV, NB.SI.ENS</li><li>Dashboards KPI commerciaux</li><li>Qualification fichiers prospects</li></ul></div></div></div>
+    <div class="logiciel-card scale-up"><img src="Logiciels/logo-hubspot.png" alt="HubSpot"/><span>HubSpot</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">HubSpot</div><div class="logiciel-card-overlay-text"><ul><li>Formation autodidacte</li><li>S&eacute;quences inbound &amp; outbound</li><li>Workflows de nurturing</li><li>Scoring &amp; suivi des leads</li></ul></div></div></div>
+    <div class="logiciel-card scale-up"><img src="Logiciels/logo-excel.png" alt="Excel"/><span>Excel</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Excel</div><div class="logiciel-card-overlay-text"><ul><li>Usage quotidien chez Manpower &amp; Danone</li><li>TCD &amp; formules avanc&eacute;es</li><li>Dashboards KPI commerciaux</li><li>Qualification fichiers prospects</li></ul></div></div></div>
     <div class="logiciel-card scale-up"><img src="Logiciels/logo-powerpoint.png" alt="PowerPoint"/><span>PowerPoint</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">PowerPoint</div><div class="logiciel-card-overlay-text"><ul><li>Supports commerciaux clients</li><li>Reportings internes</li><li>Livrables acad&eacute;miques MBS</li></ul></div></div></div>
-    <div class="logiciel-card scale-up"><img src="Logiciels/logo-power-bi.png" alt="Power BI"/><span>Power BI</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Power BI</div><div class="logiciel-card-overlay-text"><ul><li>Dashboards pipeline commercial</li><li>Taux de conversion &amp; CA pr&eacute;visionnel</li><li>Reporting automatis&eacute;</li><li>Connect&eacute; aux donn&eacute;es Bullhorn</li></ul></div></div></div>
-    <div class="logiciel-card scale-up"><img src="Logiciels/logo-copilot.png" alt="Microsoft Copilot"/><span>Copilot</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Copilot</div><div class="logiciel-card-overlay-text"><ul><li>Comptes-rendus de RDV auto</li><li>R&eacute;daction emails de relance</li><li>Synth&egrave;se de documents</li><li>Int&eacute;gr&eacute; au flux Manpower</li></ul></div></div></div>
-    <div class="logiciel-card scale-up"><img src="Logiciels/logo-claude.svg" alt="Claude AI"/><span>Claude AI</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Claude AI</div><div class="logiciel-card-overlay-text"><ul><li>Agents m&eacute;tier &amp; workflows IA</li><li>Outbound personnalis&eacute; par secteur</li><li>Portfolio construit via Claude Code</li><li>Certifi&eacute; AI Fluency (Anthropic)</li></ul></div></div></div>
+    <div class="logiciel-card scale-up"><img src="Logiciels/logo-power-bi.png" alt="Power BI"/><span>Power BI</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Power BI</div><div class="logiciel-card-overlay-text"><ul><li>Connect&eacute; aux donn&eacute;es Bullhorn</li><li>Dashboards pipeline commercial</li><li>Taux de conversion &amp; CA pr&eacute;visionnel</li><li>Reporting automatis&eacute;</li></ul></div></div></div>
+    <div class="logiciel-card scale-up"><img src="Logiciels/logo-copilot.png" alt="Microsoft Copilot"/><span>Copilot</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Copilot</div><div class="logiciel-card-overlay-text"><ul><li>Int&eacute;gr&eacute; au flux Manpower</li><li>Comptes-rendus de RDV auto</li><li>R&eacute;daction emails de relance</li><li>Synth&egrave;se de documents</li></ul></div></div></div>
+    <div class="logiciel-card scale-up"><img src="Logiciels/logo-claude.svg" alt="Claude AI"/><span>Claude AI</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Claude AI</div><div class="logiciel-card-overlay-text"><ul><li>Portfolio construit via Claude Code</li><li>Agents m&eacute;tier &amp; workflows IA</li><li>Outbound personnalis&eacute; par secteur</li><li>Certifi&eacute; AI Fluency (Anthropic)</li></ul></div></div></div>
     <div class="logiciel-card scale-up"><img src="Logiciels/logo-anthropic.png" alt="Anthropic"/><span>Anthropic</span><div class="logiciel-card-overlay"><div class="logiciel-card-overlay-title">Anthropic</div><div class="logiciel-card-overlay-text"><ul><li>API Claude &amp; prompting avanc&eacute;</li><li>Cr&eacute;ation d&rsquo;agents autonomes</li><li>Claude Code pour outils m&eacute;tier</li><li>Veille &amp; automatisation</li></ul></div></div></div>
   </div>
   <div class="certs-row fade-in">
@@ -470,15 +474,6 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
   </div>
 </section>
 
-<!-- COMPETENCES -->
-<section id="competences">
-  <div class="section-header"><span class="section-label">Comp&eacute;tences</span></div>
-  <div class="skills-grid">
-    <div class="skill-col panel slide-in-left"><h3>Business Development</h3><ul><li>Full cycle : outbound, qualification, closing</li><li>Pipeline management 150+ comptes tertiaire</li><li>Cold call, discovery call, nurturing</li><li>N&eacute;gociation, onboarding, fid&eacute;lisation</li><li>CRM : Bullhorn, HubSpot</li></ul></div>
-    <div class="skill-col panel fade-in"><h3>Data &amp; Outils</h3><ul><li>Excel avanc&eacute; (TCD, formules complexes, dashboards)</li><li>Reporting KPI quotidien et hebdomadaire</li><li>CRM Bullhorn &middot;suivi pipeline complet</li><li>AssessFirst (&eacute;valuation comportementale)</li><li>HubSpot (gestion inbound/outbound)</li></ul></div>
-    <div class="skill-col panel slide-in-right"><h3>IA &amp; Innovation</h3><ul><li>Claude AI &middot;cr&eacute;ation d&rsquo;agents m&eacute;tier</li><li>Microsoft Copilot &middot;automatisation</li><li>Veille march&eacute; automatis&eacute;e</li><li>G&eacute;n&eacute;ration de mails outbound IA</li><li>Certification AI Fluency (Anthropic)</li></ul></div>
-  </div>
-</section>
 
 <!-- TRAJECTOIRE -->
 <section id="vision">
@@ -487,12 +482,11 @@ section { padding:100px 40px; max-width:1200px; margin:0 auto; }
     <p style="margin-top:16px;font-size:clamp(.9rem,1.6vw,1.05rem);color:var(--color-text-secondary);max-width:540px;margin-left:auto;margin-right:auto;line-height:1.8;">Mon objectif n&rsquo;est pas un poste. C&rsquo;est une trajectoire.</p>
   </div>
   <div class="traj-grid">
-    <div class="traj-card scale-up"><div class="traj-step">&#201;tape 1 &middot; Sept 2026</div><div class="traj-title">BD / SDR dans la Tech &middot; Paris</div><div class="traj-desc">Int&eacute;grer une entreprise tech ambitieuse : fintech, SaaS, &eacute;diteur logiciel. Cibles : <strong>Septeo, Dell, Salesforce, Oracle</strong>, fintechs en hypercroissance.</div></div>
+    <div class="traj-card scale-up"><div class="traj-step">&#201;tape 1 &middot; Sept 2026</div><div class="traj-title">BD / SDR dans la Tech &middot; Paris</div><div class="traj-desc">Int&eacute;grer un &eacute;diteur de logiciels ou une fintech ambitieuse en hypercroissance pour d&eacute;velopper un portefeuille full cycle.</div></div>
     <div class="traj-card scale-up"><div class="traj-step">&#201;tape 2 &middot; Horizon 2/3 ans</div><div class="traj-title">Account Executive</div><div class="traj-desc">Portefeuille comptes de A &agrave; Z, autonomie sur le cycle de vente complet. Monter en puissance sur les deals complexes.</div></div>
-    <div class="traj-card scale-up"><div class="traj-step">&#201;tape 3 &middot; Horizon 5 ans</div><div class="traj-title">Sales Manager / Grands Comptes</div><div class="traj-desc">Manager une &eacute;quipe ou piloter des comptes strat&eacute;giques. Direction d&eacute;j&agrave; acquise : pr&eacute;sident d&rsquo;une association de <strong>45 personnes</strong>.</div></div>
-    <div class="traj-card scale-up"><div class="traj-step">&#201;tape 4 &middot; Horizon 8/10 ans</div><div class="traj-title">Retour dans le Sud</div><div class="traj-desc">Activit&eacute; commerciale en r&eacute;gion. Montpellier : <strong>Septeo</strong> (si&egrave;ge social), <strong>Dell</strong>, scale-ups en d&eacute;veloppement.</div></div>
+    <div class="traj-card scale-up"><div class="traj-step">&#201;tape 3 &middot; Horizon 5 ans</div><div class="traj-title">Sales Manager / Grands Comptes</div><div class="traj-desc">Manager une &eacute;quipe commerciale ou piloter des grands comptes strat&eacute;giques avec autonomie compl&egrave;te sur le cycle de vente.</div></div>
+    <div class="traj-card scale-up"><div class="traj-step">&#201;tape 4 &middot; Horizon 8/10 ans</div><div class="traj-title">Direction commerciale</div><div class="traj-desc">Acc&eacute;der &agrave; des fonctions de direction commerciale — VP Sales ou Directeur Commercial. Construire une &eacute;quipe, d&eacute;finir une strat&eacute;gie et piloter la croissance &agrave; long terme.</div></div>
   </div>
-  <p class="traj-tagline fade-in">Disponible d&egrave;s septembre 2026 &middot; Paris et &Icirc;le-de-France &middot; Ouvert &agrave; la mobilit&eacute; nationale</p>
 </section>
 
 <!-- CV -->
